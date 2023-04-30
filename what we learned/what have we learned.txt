@@ -1,0 +1,61 @@
+Backend Focused
+Fully Responsive
+Material Ui sidebar
+
+
+
+
+Pages
+-----
+-Products:    
+-Customers:   material UI data grid: good data table
+-Transaction: server-side pagination
+-Geography:   where are our user location: using geography chart
+
+-overview:    line chart: showing revenue by month
+-Daily:       we can choose different ranges of date of our daily sales
+-Monthly:
+-Breakdown:   Pie-chart
+
+
+-Admin:       Admin table
+-Performance: Using Aggregate cause in mongo database: Very Advance Knowlege
+
+
+
+IMPORTANT 
+---------
+How to use entity relation diagram: for organize the backend
+
+
+Deployment
+----------
+Render.com
+
+
+
+TECHNOLOGY
+----------
+
+Backend
+-MERN
+-BodyParser: parsing our incoming data 
+-cors:       cross origin resource sharing
+-dotenv:     environment variable
+-helmet:     protecting our api
+-morgan:     logging our api call
+-mongoose:   handling mongo db call
+-nodemon:    live server reload
+
+Frontend
+-Material UI
+-Material UI table
+-Nivo:                for chart
+-Redux toolkit:       for state management
+-Redux toolKit query: for api call
+
+
+
+
+
+
