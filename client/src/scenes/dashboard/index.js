@@ -26,6 +26,8 @@ import {
   useMediaQuery,
 } from "@mui/material";
 import { DataGrid } from "@mui/x-data-grid";
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
 
 
 
@@ -111,6 +113,22 @@ const columns = [
   },
 ];
 
+
+
+const MySwal = withReactContent(Swal)
+
+useEffect(() => {
+
+
+ 
+   MySwal.fire({
+     icon: 'info',
+     title: 'Sorry for latency',
+     text: 'I am using free version of Render.com as web service of backend',
+     
+   })
+  
+}, [])
 
 
 
