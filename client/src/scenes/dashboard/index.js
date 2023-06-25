@@ -28,6 +28,9 @@ import {
 import { DataGrid } from "@mui/x-data-grid";
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
+import { useSelector } from "react-redux";
+import {useDispatch} from "react-redux";
+import { setRendercom } from "state";
 
 
 
@@ -63,6 +66,9 @@ const Dashboard = () => {
 // -------
 
 const { data, isLoading } = useGetDashboardQuery();
+
+const rendercom = useSelector((state)=>state.global.rendercom);
+const dispatch = useDispatch();
 
 
 
@@ -119,16 +125,21 @@ const MySwal = withReactContent(Swal)
 
 useEffect(() => {
 
+  if (rendercom === true){
+    MySwal.fire({
+      icon: 'info',
+      title: 'Sorry for latency and slow loading',
+      text: 'I am using free version of Render.com as web service of backend',
+      
+    })
+  }
 
- 
-   MySwal.fire({
-     icon: 'info',
-     title: 'Sorry for latency',
-     text: 'I am using free version of Render.com as web service of backend',
-     
-   })
-  
-}, [])
+  return ()=>{
+
+    dispatch(setRendercom());
+  }
+    
+}, [MySwal,dispatch,rendercom])
 
 
 
